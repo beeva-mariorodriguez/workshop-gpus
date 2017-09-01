@@ -105,9 +105,35 @@ void check_paths(char* argv[])
 
 // OpenCV way, not used in this exercise.
 // The implementation is shown for didactic purposes
+
+/*
 Mat rgb2grayCPU(Mat rgb_image)
 {
 	Mat gray;
 	cvtColor(rgb_image, gray, CV_BGR2GRAY);
+	return gray;
+}*/
+
+
+Mat rgb2grayCPU(Mat rgb_image)
+{
+	Mat gray(rgb_image.rows, rgb_image.cols, CV_8UC1, Scalar(0));
+	Vec3b pixel;
+	uchar R, G, B;
+	
+	for(int i=0; i<rgb_image.rows; i++)
+	{
+		for(int j=0; j<rgb_image.cols; j++)
+		{
+			pixel = rgb_image.at<Vec3b>(i,j);
+
+			R = pixel.val[2]; // Remember, OpenCV returns BGR values
+			G = pixel.val[1];
+			B = pixel.val[0];
+
+			gray.at<uchar>(i,j) = 0.299*R + 0.587*G + 0.114*B;
+		}
+	}
+
 	return gray;
 }
