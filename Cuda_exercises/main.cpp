@@ -4,8 +4,9 @@
 #include <opencv2/core/core.hpp>
 #include <opencv2/highgui.hpp>
 
-//#include "rgb2gray.h"
+#include "rgb2gray.h"
 
+//#define DISPLAY_ON
 
 using namespace std;
 using namespace cv;
@@ -24,6 +25,7 @@ int main(int argc, char*argv[])
 	string path2rgb = argv[1];
 	string path2gray = argv[2];
 	string mode = argv[3];
+	string display_mode = argv[4];
 
 	Mat rgb_image, gray_image;
 
@@ -33,15 +35,17 @@ int main(int argc, char*argv[])
 		gray_image = rgb2grayCPU(rgb_image);
 	else
 		// CUDA part
-		//gray_image = rgb2grayGPU(rgb_image); 
-		gray_image = rgb2grayCPU(rgb_image); // TODO delete this line and uncomment the previous one
+		gray_image = rgb2grayCPU(rgb_image);
 
 	// Display
-	namedWindow("RGB image", WINDOW_AUTOSIZE );
-	imshow("RGB image", rgb_image);
-	namedWindow("gray image", WINDOW_AUTOSIZE );
-	imshow("gray image", gray_image);
-	waitKey(0);
+	if (display_mode == string("DISPLAY_ON"))
+	{
+		namedWindow("RGB image", WINDOW_AUTOSIZE );
+		imshow("RGB image", rgb_image);
+		namedWindow("gray image", WINDOW_AUTOSIZE );
+		imshow("gray image", gray_image);
+		waitKey(0);
+	}
 
 	// Write result
 	imwrite(path2gray, gray_image);
@@ -57,7 +61,7 @@ void check_arguments(int argc, char* argv[])
 	usage_instructions += " path/to/color_image.jpg path/to/gray_image.jpg MODE_CPU / MODE_GPU";
 
 	// make sure the user has provided input and output files
-	if (argc != 4)
+	if (argc != 5)
 	{
 		cerr << usage_instructions << endl;
 		exit(EXIT_FAILURE);
@@ -65,6 +69,13 @@ void check_arguments(int argc, char* argv[])
 
 	if (string(argv[3]) != "MODE_CPU" && \
 		string(argv[3]) != "MODE_GPU" )
+	{
+		cerr << usage_instructions << endl;
+		exit(EXIT_FAILURE);
+	}
+
+	if (string(argv[4]) != "DISPLAY_ON" && \
+		string(argv[4]) != "DISPLAY_OFF" )
 	{
 		cerr << usage_instructions << endl;
 		exit(EXIT_FAILURE);
@@ -127,9 +138,10 @@ Mat rgb2grayCPU(Mat rgb_image)
 		{
 			pixel = rgb_image.at<Vec3b>(i,j);
 
-			R = pixel.val[2]; // Remember, OpenCV returns BGR values
-			G = pixel.val[1];
+			// Remember, OpenCV returns BGR values
 			B = pixel.val[0];
+			G = pixel.val[1];
+			R = pixel.val[2];
 
 			gray.at<uchar>(i,j) = 0.299*R + 0.587*G + 0.114*B;
 		}
