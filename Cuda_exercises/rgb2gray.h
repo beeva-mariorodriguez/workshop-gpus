@@ -1,1 +1,1 @@
-Mat rgb2grey(Mat color_image);
+cv::Mat rgb2grey(cv::Mat color_image);
