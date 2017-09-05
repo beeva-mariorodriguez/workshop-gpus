@@ -45,7 +45,7 @@ You will use two datasets that are structures with information about users, movi
     9        25       17        61614
     10       35       1         95370
 ```
-* Ratings, 10M of ratings (not all ratings have users linked).
+* Ratings, 1M, 10M and 20 of ratings (not all ratings have users linked).
 ```
  user_id  movie_id  rating  timestamp
     1      1193       5     978300760
