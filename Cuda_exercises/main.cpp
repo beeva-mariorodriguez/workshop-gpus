@@ -34,8 +34,7 @@ int main(int argc, char*argv[])
 	if(mode == string("MODE_CPU"))
 		gray_image = rgb2grayCPU(rgb_image);
 	else
-		// CUDA part
-		gray_image = rgb2grayCPU(rgb_image);
+		gray_image = rgb2grayGPU(rgb_image); // CUDA part
 
 	// Display
 	if (display_mode == string("DISPLAY_ON"))
