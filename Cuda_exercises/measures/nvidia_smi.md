@@ -1,4 +1,7 @@
 ```bash
+
+Note: as can be seen in the following table,since the startup, the GPU already allocated 55MiB for internal processes.
+
 Tue Sep  5 10:28:57 2017
 +------------------------------------------------------+
 | NVIDIA-SMI 352.63     Driver Version: 352.63         |
