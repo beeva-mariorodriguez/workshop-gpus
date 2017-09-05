@@ -57,7 +57,7 @@ void check_arguments(int argc, char* argv[])
 {
 	string usage_instructions = "Usage instructions: ";
 	usage_instructions += argv[0];
-	usage_instructions += " path/to/color_image.jpg path/to/gray_image.jpg MODE_CPU / MODE_GPU";
+	usage_instructions += " path/to/color_image.jpg path/to/gray_image.jpg MODE_CPU / MODE_GPU DISPLAY_OFF / DISPLAY_ON";
 
 	// make sure the user has provided input and output files
 	if (argc != 5)
