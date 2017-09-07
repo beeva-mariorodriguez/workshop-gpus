@@ -87,11 +87,11 @@ jupyter notebook --certfile=/home/ubuntu/ssl/cert.pem --keyfile /home/ubuntu/ssl
 * Open your browser and connect to instance host via https in port 9999 (e.g. https://ec2-54-234-180-164.compute-1.amazonaws.com:999) You should add an security exception. And type password *beevajupyter* in log in form.
 * You can watch a tree folder with 3 directories. Please access to foler in this order (columnar_operations, select-where_operations and join_operations) and run the exercises in order you watch. Before run each cells, wait cell before is finished.
 * Is very importante you choose kernel Python 3 PyGDF for each exercise.
-* In each exercise you could compare timine to run the same process in Pandas and PyGDF (copy and paste each output in a text file to whatc comparison better, if you want and save it beacuse in next exercise you run only Pandas code in a CPU optimized instance and you could compare to this results)
+* In each exercise you could compare time to run the same process in Pandas and PyGDF (copy and paste each output in a text file to whatc comparison better, if you want and save it beacuse in next exercise you run only Pandas code in a CPU optimized instance and you could compare to this results)
 
 
 * Now Launch a new instance (follow the same steps before with the same AMI and configuration). But in this case select c4.4xlarge instance type ompitzed for compute.
-* Launch exercises again but only pandas functions (comment pygdf functions)
+* Launch exercises again but only pandas functions (comment pygdf functions and df_xxx = DataFrame.from_pandas(xxx))
 
 
 
