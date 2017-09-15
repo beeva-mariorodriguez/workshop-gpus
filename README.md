@@ -2,6 +2,15 @@
 Materials for BEEVA Labs workshop on GPUs
 
 Content:
-* [Cuda_exercises](./Cuda_exercises): exercises in C++ for showing multithreaded CUDA programming
-* [PyGDF_exercises](./PyGDF_exercises): exercises in Python for showing PyGDF performance and comparte to Pandas
+* Module 2:
+  * [Cuda_exercises](./Cuda_exercises): exercises in C++ for showing multithreaded CUDA programming
+* Module 3:
+  * [MapD exercise](https://github.com/beeva-enriqueotero/beeva-poc-mapd)
+  * BlazingDB on AWS p2.x. SSB Example
+  * [PyGDF_exercises](./PyGDF_exercises): exercises in Python to show PyGDF performance compared to Pandas
+* Module 4:
+  * [tfmesos example](https://github.com/douban/tfmesos/blob/master/examples/matrix_factorization.py)
+* Module 5:
+  * [Minpy vs Numpy](https://github.com/beeva-albertorincon/beeva-poc-minpy)
+  * [Tensorflow MNIST on Floydhub](https://github.com/beeva-ricardoguerrero/Floydhub_experiments)
 
