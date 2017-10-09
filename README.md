@@ -11,7 +11,7 @@ Content:
 * Module 4:
   * [tfmesos example](https://github.com/douban/tfmesos/blob/master/examples/matrix_factorization.py)
 * Module 5:
-  * [Minpy vs Numpy](https://github.com/beeva-albertorincon/beeva-poc-minpy)
+  * [[Optional] Minpy vs Numpy](https://github.com/beeva-albertorincon/beeva-poc-minpy)
   * [Tensorflow MNIST on Floydhub](https://github.com/beeva-ricardoguerrero/Floydhub_experiments)
 * Extra:
   * [CIFAR10 on Mxnet](https://github.com/beeva-enriqueotero/beeva-poc-mxnet/blob/master/README_cifar.md)
