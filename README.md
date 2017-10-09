@@ -9,7 +9,7 @@ Content:
   * [Optional] BlazingDB on AWS p2.x. SSB Example
   * [PyGDF_exercises](./PyGDF_exercises): exercises in Python to show PyGDF performance compared to Pandas
 * Module 4:
-  * [tfmesos example](https://github.com/douban/tfmesos/blob/master/examples/matrix_factorization.py)
+  * [[Optional] tfmesos example](https://github.com/douban/tfmesos/blob/master/examples/matrix_factorization.py)
 * Module 5:
   * [[Optional] Minpy vs Numpy](https://github.com/beeva-albertorincon/beeva-poc-minpy)
   * [Tensorflow MNIST on Floydhub](https://github.com/beeva-ricardoguerrero/Floydhub_experiments)
