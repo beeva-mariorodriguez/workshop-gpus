@@ -1,2 +1,15 @@
 Cuda_exercises/build/*
 Cuda_exercises/cat2.jpg
+libcudnn6_6.0.21-1+cuda8.0_amd64.deb
+libcudnn6-dev_6.0.21-1+cuda8.0_amd64.deb
+### Terraform ###
+# Compiled files
+lab/*.tfstate
+lab/*.tfstate.backup
+
+# Module directory
+lab/.terraform/
+
+### Terraform Patch ###
+lab/*.tfvars
+
