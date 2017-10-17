@@ -4,7 +4,7 @@ Materials for BEEVA Labs workshop on GPUs
 Content:
 * Module 1:
   * [From RGB to gray](./minpy-exercise): minpy code to test CPU and GPU implementation of an algorithm that converts images from RGB to gray.
-  * [CIFAR10 on Mxnet](https://github.com/apache/incubator-mxnet): exercises with images to learn about bottlenecks in GPU.
+  * [[Optional] CIFAR10 on Mxnet](https://github.com/apache/incubator-mxnet): exercises with images to learn about bottlenecks in GPU.
  
 * Module 2:
   * [Cuda_exercises](./Cuda_exercises): exercises in C++ for showing multithreaded CUDA programming
