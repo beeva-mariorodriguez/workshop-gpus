@@ -3,7 +3,7 @@ Materials for BEEVA Labs workshop on GPUs
 
 Content:
 * Module 1:
-  * [From RGB to gray](https://github.com/beeva-albertorincon/beeva-poc-minpy): minpy code to test CPU and GPU implementation of an algorithm that converts images from RGB to gray.
+  * [From RGB to gray](./minpy-exercise): minpy code to test CPU and GPU implementation of an algorithm that converts images from RGB to gray.
   * [CIFAR10 on Mxnet](https://github.com/apache/incubator-mxnet): exercises with images to learn about bottlenecks in GPU.
  
 * Module 2:
