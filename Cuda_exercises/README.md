@@ -1,13 +1,7 @@
-### Compile
+### Compile and execute
 ```
 # chmod +x execute.sh
 ./execute.sh
-```
-
-### Execute
-```
-cd build
-./rgb2gray ../cat.jpg ../cat2.jpg MODE_GPU DISPLAY_OFF
 ```
 
 ### Profile
