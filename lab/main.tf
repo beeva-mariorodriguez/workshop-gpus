@@ -50,52 +50,6 @@ resource "aws_route" "r" {
   gateway_id             = "${aws_internet_gateway.gw.id}"
 }
 
-# resource "aws_iam_role" "mapd_sample_data_ro_role" {
-#   name = "s3_readonly_role"
-
-#   assume_role_policy = <<EOF
-# {
-#   "Version": "2012-10-17",
-#   "Statement": {
-#     "Effect": "Allow",
-#     "Principal": {"Service": "ec2.amazonaws.com"},
-#     "Action": "sts:AssumeRole"
-#   }
-# }
-# EOF
-# }
-
-# resource "aws_iam_policy" "mapd_sample_data_ro_policy" {
-#   name        = "mapd_sample_data_ro_profile"
-#   description = "mapd_sample_data_ro_profile"
-
-#   policy = <<EOF
-# {
-#   "Version": "2012-10-17",
-#   "Statement": [
-#     {
-#       "Action": [
-#         "s3:Get*",
-#         "s3:List*"
-#       ],
-#       "Effect": "Allow",
-#       "Resource": "arn:aws:s3:::awssampledbuswest2"
-#     }
-#   ]
-# }
-# EOF
-# }
-
-# resource "aws_iam_role_policy_attachment" "test-attach" {
-#   role       = "${aws_iam_role.mapd_sample_data_ro_role.name}"
-#   policy_arn = "${aws_iam_policy.mapd_sample_data_ro_policy.arn}"
-# }
-
-# resource "aws_iam_instance_profile" "mapd_sample_data_ro_profile" {
-#   name = "mapd_sample_data_ro_profile"
-#   role = "${aws_iam_role.mapd_sample_data_ro_role.name}"
-# }
-
 resource "aws_instance" "workshop_server" {
   ami           = "${data.aws_ami.workshop_ami.image_id}"
   instance_type = "p2.xlarge"
@@ -111,6 +65,6 @@ resource "aws_instance" "workshop_server" {
   ]
 
   root_block_device = {
-    volume_size = 100
+    volume_size = 150
   }
 }
