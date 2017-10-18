@@ -50,14 +50,15 @@ resource "aws_route" "r" {
   gateway_id             = "${aws_internet_gateway.gw.id}"
 }
 
-resource "aws_instance" "workshop_server" {
+#resource "aws_instance" "workshop_server" {
+resource "aws_spot_instance_request" "workshop_server" {
   ami           = "${data.aws_ami.workshop_ami.image_id}"
   instance_type = "p2.xlarge"
+  spot_price    = "0.2"
   subnet_id     = "${aws_subnet.workshop_subnet.id}"
 
-  #  iam_instance_profile = "${aws_iam_instance_profile.mapd_sample_data_ro_profile.id}"
   key_name = "workshop2017"
-  count    = 1
+  count    = 12
 
   vpc_security_group_ids = [
     "${aws_vpc.workshop_vpc.default_security_group_id}",
