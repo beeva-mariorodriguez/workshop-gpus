@@ -16,4 +16,6 @@ curl "http://awssampledbuswest2.s3.amazonaws.com/ssbgz/customer0002_part_00.gz" 
     gunzip > "${DEST}/customer0002_part_00"
 
 cp dwdate.tbl "$DEST"
+cp load_files.sql "$DEST"
+cp create_tables.sql "$DEST"
 
