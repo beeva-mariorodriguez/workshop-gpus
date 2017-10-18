@@ -13,6 +13,7 @@ pip install h5py theano
 python examples/lstm_seq2seq.py
 # Compare with CPU-only
 CUDA_VISIBLE_DEVICES="" python examples/lstm_seq2seq.py
+# To change de backend edit ~/.keras/keras.json
 ```
 
 ### GPU and CUDA profiling
