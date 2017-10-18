@@ -44,11 +44,6 @@
 			"source":"setup_user.sh",
 			"destination":"/tmp/setup_user.sh"
 		},
-        {
-            "type":"file",
-            "source":"download_mapd_sample_data.sh",
-            "destination":"/home/ubuntu/download_mapd_sample_data.sh"
-        },
 		{
             "type":"shell",
             "inline":[

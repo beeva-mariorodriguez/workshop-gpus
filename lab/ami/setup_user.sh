@@ -12,8 +12,6 @@ git clone https://github.com/apache/incubator-mxnet "${MODULE1}/incubator-mxnet"
 # module3 pygdf
 mkdir -p "$MODULE3"
 git clone https://github.com/beeva-enriqueotero/beeva-poc-mapd "${MODULE3}/beeva-poc-mapd"
-## mapd sample data
-mv download_mapd_sample_data.sh "${MODULE3}"
 ## miniconda
 wget https://repo.continuum.io/miniconda/Miniconda3-latest-Linux-x86_64.sh
 bash Miniconda3-latest-Linux-x86_64.sh -b
@@ -29,6 +27,7 @@ python setup.py install
 ## python3 pygdf kernel
 "${HOME}"/miniconda3/bin/conda install -y -n pygdf ipykernel
 ipython kernel install --name pygdf --display-name "python3 PyGDF"  --user
+"${HOME}/workshop-gpus/scripts/download_movielens_datasets.sh" "$MODULE3"
 
 # module5 - keras
 mkdir -p "$MODULE5"
