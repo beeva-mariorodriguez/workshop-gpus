@@ -13,7 +13,7 @@ Content:
   * [Optional] BlazingDB on AWS p2.x. SSB Example
   * [PyGDF_exercises](./PyGDF_exercises): exercises in Python to show PyGDF performance compared to Pandas
 * Module 4:
-  * [[Optional] tfmesos example](https://github.com/douban/tfmesos/blob/master/examples/matrix_factorization.py)
+  * [infrastructure](./infrastructure)
 * Module 5:
   * [Seq2Seq](https://github.com/beeva-labs/beeva-poc-keras/blob/master/README_lstm_seq2seq.md): Neural Machine Translation in Keras
   * [[Optional] Minpy vs Numpy](https://github.com/beeva-albertorincon/beeva-poc-minpy)
