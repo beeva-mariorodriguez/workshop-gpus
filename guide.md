@@ -5,12 +5,12 @@
 1. Open a terminal
 1. Set read-only permission for the key.
 ```bash
-chmod 400 Descargas/workshop2017.pem
+chmod 400 workshop2017.pem
 ```
 
 1. Connect to the machine.
 ```bash
-ssh -L 8888:127.0.0.1:8888 -L 9092:127.0.0.1:9092 ubuntu@13.58.115.202 -i Descargas/workshop2017.pem
+ssh -L 8888:127.0.0.1:8888 -L 9092:127.0.0.1:9092 ubuntu@<IP> -i workshop2017.pem
 ```
 
 1. Update the repo.
