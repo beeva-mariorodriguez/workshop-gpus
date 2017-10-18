@@ -10,7 +10,10 @@ pip install h5py theano
 
 ### Launch script
 ```
+cd keras
 python examples/lstm_seq2seq.py
+# Training 100 epochs should take 25 min !!
+
 # Compare with CPU-only
 CUDA_VISIBLE_DEVICES="" python examples/lstm_seq2seq.py
 # To change de backend edit ~/.keras/keras.json
@@ -23,3 +26,14 @@ CUDA_VISIBLE_DEVICES="" python examples/lstm_seq2seq.py
 # For GPU utilization see nvidia-smi or nvidia-settings -q GPUUtilization
 ```
 
+### Tuning
+Tune batch size and learning rate in lstm_seq2seq.py
+```
+from keras import optimizers
+#...
+batch_size = 256
+#...
+rmsprop = optimizers.rmsprop(lr=0.004)
+model.compile(optimizer=rmsprop, loss='categorical_crossentropy')
+#...
+```
