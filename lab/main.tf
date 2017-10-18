@@ -56,7 +56,7 @@ resource "aws_instance" "workshop_server" {
   subnet_id     = "${aws_subnet.workshop_subnet.id}"
 
   #  iam_instance_profile = "${aws_iam_instance_profile.mapd_sample_data_ro_profile.id}"
-  key_name = "mrc"
+  key_name = "workshop2017"
   count    = 1
 
   vpc_security_group_ids = [
