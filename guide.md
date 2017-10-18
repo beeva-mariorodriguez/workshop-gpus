@@ -4,15 +4,19 @@
 1. Download the key `workshop2017.pem`
 1. Open a terminal
 1. Set read-only permission for the key.
-
-	`chmod 400 Descargas/workshop2017.pem`
+```bash
+chmod 400 Descargas/workshop2017.pem
+```
 
 1. Connect to the machine.
-
-	`ssh -L 8888:127.0.0.1:8888 -L 9092:127.0.0.1:9092 ubuntu@13.58.115.202 -i Descargas/workshop2017.pem`
+```bash
+ssh -L 8888:127.0.0.1:8888 -L 9092:127.0.0.1:9092 ubuntu@13.58.115.202 -i Descargas/workshop2017.pem
+```
 
 1. Update the repo.
-	`cd ~/workshop-gpus; git pull`
+```bash
+cd ~/workshop-gpus; git pull
+```
 
 # Module 1
 
@@ -27,13 +31,13 @@ python rgb2gray.py
 
 ## 01 CUDA
 Compile the code.
-```
+```bash
 cd ~/workshop-gpus/Cuda_exercises
 chmod +x execute.sh
 ./execute.sh
 ```
 Profile the code.
-```
+```bash
 cd build
 time ./rgb2gray ../cat.jpg ../cat2.jpg MODE_GPU DISPLAY_OFF
 nvprof ./rgb2gray ../cat.jpg ../cat2.jpg MODE_GPU DISPLAY_OFF # Export to file nvprof -o rgb2gray.nvprof ./rgb2gray ../cat.jpg ../cat2.jpg MODE_GPU DISPLAY_OFF
@@ -43,16 +47,18 @@ nvprof ./rgb2gray ../cat.jpg ../cat2.jpg MODE_GPU DISPLAY_OFF # Export to file n
 
 ## 01 MapD
 1. Launch the service:
-
-	`~/workshop-gpus/scripts/start_mapd.sh`
+```bash
+~/workshop-gpus/scripts/start_mapd.sh
+```
 
 1. Notes on the container:
   * Ports: MapD Web 9092. Hence the SSH tunnel.
   * Mounted folders: /mapd-storage/data and /mapd-storage/ingest.
 
 1. Download data (_slow, ~10 min_).
-
-	`sudo ~/workshop-gpus/scripts/download_mapd_sample_data.sh /mapd-storage/data`
+```bash
+sudo ~/workshop-gpus/scripts/download_mapd_sample_data.sh /mapd-storage/data
+```
 1. Connect to the container:
 
 	`docker exec -ti mapd bash`
