@@ -1,6 +1,17 @@
 # workshop-gpus
 Materials for BEEVA Labs workshop on GPUs
 
+access instructions
+* each group will have access to a AWS GPU instance (we will provide the IP and private key)
+* to access the instance:
+  ```bash
+  ssh -i workshop2017.pem ubuntu@<IP>
+  ```
+* to access the instance, enabling port redirection for jupyter notebook and mapd
+  ```bash
+  ssh -L 8888:127.0.0.1:8888 -L 9092:127.0.0.1:9092 -i workshop2017.pem ubuntu@<IP>
+  ```
+
 Content:
 * Module 1:
   * [From RGB to gray](./minpy-exercise): minpy code to test CPU and GPU implementation of an algorithm that converts images from RGB to gray.
