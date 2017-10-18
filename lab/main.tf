@@ -66,6 +66,6 @@ resource "aws_spot_instance_request" "workshop_server" {
   ]
 
   root_block_device = {
-    volume_size = 150
+    volume_size = 200
   }
 }
