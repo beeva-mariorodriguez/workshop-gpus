@@ -26,7 +26,7 @@ Content:
 * Module 4:
   * [[Optional] tfmesos example](https://github.com/douban/tfmesos/blob/master/examples/matrix_factorization.py)
 * Module 5:
-  * [Seq2Seq](https://github.com/beeva-labs/beeva-poc-keras/blob/master/README_lstm_seq2seq.md): Neural Machine Translation in Keras
+  * [Seq2Seq](./keras-exercise): Neural Machine Translation in Keras
   * [[Optional] Minpy vs Numpy](https://github.com/beeva-albertorincon/beeva-poc-minpy)
   * [[Optional] Tensorflow MNIST on Floydhub](https://github.com/beeva-ricardoguerrero/Floydhub_experiments)
 * Extra:
