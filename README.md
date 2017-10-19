@@ -40,6 +40,6 @@ cd ~/workshop-gpus; git pull
   * [Seq2Seq](./keras-exercise): Neural Machine Translation in Keras
 
 * Extra:
-  * [CIFAR10 on Mxnet](https://github.com/beeva-enriqueotero/beeva-poc-mxnet/blob/master/README_cifar.md)
-  * [CIFAR10 on Tensorflow](https://github.com/tensorflow/models/tree/master/tutorials/image/cifar10_estimator)
+  * [MultiGPU](./multigpu-exercise): Train a Deep Learning Model on multiGPU in the Cloud
+ 
 
