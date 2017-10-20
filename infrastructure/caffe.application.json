@@ -13,16 +13,6 @@
     "type": "MESOS",
     "volumes": []
   },
-  "env": {
-    "LD_LIBRARY_PATH": "/usr/local/nvidia/lib64"
-  },
-  "volumes": [
-      {
-        "containerPath": "/usr/local/nvidia",
-        "hostPath": "/usr/local/nvidia",
-        "mode": "RO"
-      }
-    ],
   "portDefinitions": [
     {
       "port": 0,

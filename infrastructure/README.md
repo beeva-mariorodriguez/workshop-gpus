@@ -63,16 +63,6 @@ curl -XPOST --data-binary @1902600-40047810-640-360.jpg http://127.0.0.1:8000/ap
     "type": "MESOS",
     "volumes": []
   },
-  "env": {
-    "LD_LIBRARY_PATH": "/usr/local/nvidia/lib64"
-  },
-  "volumes": [
-      {
-        "containerPath": "/usr/local/nvidia",
-        "hostPath": "/usr/local/nvidia",
-        "mode": "RO"
-      }
-    ],
   "portDefinitions": [
     {
       "port": 0,
