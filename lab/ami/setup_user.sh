@@ -28,6 +28,7 @@ python setup.py install
 "${HOME}"/miniconda3/bin/conda install -y -n pygdf ipykernel
 ipython kernel install --name pygdf --display-name "python3 PyGDF"  --user
 "${HOME}/workshop-gpus/scripts/download_movielens_datasets.sh" "$MODULE3"
+source deactivate
 
 # module5 - keras
 mkdir -p "$MODULE5"
@@ -40,3 +41,4 @@ unzip -d "$MODULE5" fra-eng.zip fra.txt
 git clone https://github.com/fchollet/keras "$MODULE5/keras"
 sed -i "s_/Users/fchollet/Downloads/fra-eng/fra.txt_${MODULE5}/fra.txt_" "$MODULE5/keras/examples/lstm_seq2seq.py"
 deactivate
+

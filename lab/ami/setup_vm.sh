@@ -16,7 +16,7 @@ done
 
 systemctl mask mesos-slave mesos-master marathon
 
-until apt-get install -y docker-ce mesos marathon zookeeper virtualenv
+until apt-get install -y docker-ce mesos marathon zookeeper virtualenv jq
 do
     echo "waiting ..."
     sleep 60
