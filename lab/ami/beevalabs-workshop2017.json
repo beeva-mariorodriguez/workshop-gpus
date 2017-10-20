@@ -1,6 +1,6 @@
 {
     "variables":{
-        "version": "0.9.2.mesos_image_providers"
+        "version": "0.9.3"
     },
     "builders":[
         {
