@@ -50,6 +50,7 @@ docker pull mapd/mapd-ce-cuda:v3.2.4
 mkdir -p /etc/mesos-slave
 mkdir -p /etc/marathon/conf
 echo "docker/runtime,filesystem/linux,cgroups/devices,gpu/nvidia" > /etc/mesos-slave/isolation
+echo "appc,docker" > /etc/mesos-slave/image_providers
 echo gpu_resources > /etc/marathon/conf/enable_features
 systemctl unmask mesos-slave mesos-master marathon
 systemctl enable mesos-slave mesos-master marathon
