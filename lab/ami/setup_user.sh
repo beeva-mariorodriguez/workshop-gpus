@@ -34,8 +34,9 @@ mkdir -p "$MODULE5"
 virtualenv "$MODULE5/seq2seq"
 source "$MODULE5/seq2seq/bin/activate"
 pip install keras tensorflow-gpu
+pip install h5py theano
 wget http://www.manythings.org/anki/fra-eng.zip
 unzip -d "$MODULE5" fra-eng.zip fra.txt
 git clone https://github.com/fchollet/keras "$MODULE5/keras"
 sed -i "s_/Users/fchollet/Downloads/fra-eng/fra.txt_${MODULE5}/fra.txt_" "$MODULE5/keras/examples/lstm_seq2seq.py"
-
+deactivate

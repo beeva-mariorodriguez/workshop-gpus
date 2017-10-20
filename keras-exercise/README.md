@@ -5,7 +5,6 @@ Following example https://blog.keras.io/a-ten-minute-introduction-to-sequence-to
 ```
 cd module5
 source seq2seq/bin/activate
-pip install h5py theano
 ```
 
 ### Launch script
