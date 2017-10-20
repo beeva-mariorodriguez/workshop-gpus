@@ -35,9 +35,6 @@ docker stop caffeserver
 cat /etc/marathon/conf/enable_features
 cat /etc/mesos-slave/isolation
 cat /etc/mesos-slave/image_providers
-# workaround!
-echo appc,docker | sudo tee /etc/mesos-slave/image_providers
-sudo systemctl restart mesos-slave
 ```
 
 ```bash
